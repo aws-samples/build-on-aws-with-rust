@@ -1,15 +1,15 @@
 config:
   target: "{{ $processEnvironment.API_URL }}"
-  processor: generator.js
+  processor: "generator.js"
   phases:
     - duration: 600
       arrivalRate: 300
 
 scenarios:
   - name: "Generate products"
-    weight: 8
+    weight: 1
     flow:
-      - function: generateProduct
+      - function: "generateProduct"
       - put:
           url: "/{{ id }}"
           headers:
@@ -18,13 +18,15 @@ scenarios:
             id: "{{ id }}"
             name: "{{ name }}"
             price: "{{ price }}"
-      - get:
-          url: "/{{ id }}"
+      - loop:
+         - get:
+            url: "/{{ id }}"
+        count: 100
       - think: 3
       - delete:
           url: "/{{ id }}"
-  - name: "Get products"
-    weight: 2
+  - name: "Get product listing"
+    weight: 5
     flow:
       - get:
           url: "/"
