@@ -15,7 +15,7 @@ functions and an [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) table for s
 - [AWS CLI](https://aws.amazon.com/cli/)
 - [AWS CDK](https://aws.amazon.com/cdk/)
 - Java 11
-- Maven
+- Apache Maven
 - [Artillery](https://www.artillery.io/) for load-testing the application
 
 ## Software
