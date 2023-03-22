@@ -1,7 +1,24 @@
 # build-on-aws-with-rust
 
 
+## Directory layout
 
+ - `serverless-compare-langs`: 5 implementations of an ecommerce application, one per language
+
+
+## `serverless-compare-langs` 
+
+The code within these directories is sourced from AWS repositories via the `sit subtree` command:
+
+| Directory                                | Upstream repository                                        |
+| ---------                                | -------------------                                        |
+| `serverless-compare-langs/go`            | https://github.com/aws-samples/serverless-go-demo          |
+| `serverless-compare-langs/java-graalvm`  | https://github.com/aws-samples/serverless-graalvm-demo     |
+| `serverless-compare-langs/kotlin`        | https://github.com/aws-samples/serverless-kotlin-demo      |
+| `serverless-compare-langs/rust`          | https://github.com/aws-samples/serverless-rust-demo        |
+| `serverless-compare-langs/typescript`    | https://github.com/aws-samples/serverless-typescript-demo  |
+
+<!--
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
@@ -90,3 +107,5 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+-->
