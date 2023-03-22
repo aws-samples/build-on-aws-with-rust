@@ -1,0 +1,5 @@
+.gradle/
+.idea/
+build/
+software/OptimizationLayer/layer.zip
+bin/
