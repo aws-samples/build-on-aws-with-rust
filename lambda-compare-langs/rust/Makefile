@@ -1,4 +1,4 @@
-STACK_NAME ?= rust-products
+STACK_NAME ?= rust-serverless-demo
 FUNCTIONS := get-products get-product put-product delete-product dynamodb-streams
 
 ARCH := aarch64-unknown-linux-gnu
@@ -45,6 +45,7 @@ tests-integ:
 		--output text) cargo test
 
 tests-load:
-	API_URL=$$(aws cloudformation describe-stacks --stack-name $(STACK_NAME) \
-		--query 'Stacks[0].Outputs[?OutputKey==`ApiUrl`].OutputValue' \
-		--output text) artillery run tests/load-test.yml
+	tests/run-load-test.sh
+	# API_URL=$$(aws cloudformation describe-stacks --stack-name $(STACK_NAME) \
+	# 	--query 'Stacks[0].Outputs[?OutputKey==`ApiUrl`].OutputValue' \
+	# 	--output text) artillery run tests/load-test.yml

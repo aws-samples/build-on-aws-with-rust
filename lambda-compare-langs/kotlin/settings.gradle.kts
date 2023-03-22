@@ -1,2 +1,2 @@
-rootProject.name = "serverless-kotlin-demo"
+rootProject.name = "kotlin-serverless-eval"
 include("software", "infrastructure")
