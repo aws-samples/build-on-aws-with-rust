@@ -48,8 +48,8 @@ public class InfrastructureStack extends Stack {
     public InfrastructureStack(final Construct parent, final String id, final StackProps props) {
         super(parent, id, props);
 
-        Table productsTable = Table.Builder.create(this, "Products")
-                .tableName("Products")
+        Table productsTable = Table.Builder.create(this, "JavaGraalVMProducts")
+                .tableName("JavaGraalVMProducts")
                 .partitionKey(Attribute.builder()
                         .type(AttributeType.STRING)
                         .name("PK")
@@ -66,15 +66,15 @@ public class InfrastructureStack extends Stack {
 
         BundlingOptions builderOptions = BundlingOptions.builder()
                 .command(functionOnePackagingInstructions)
-                .image(DockerImage.fromRegistry("marksailes/al2-graalvm:17-22.2.0"))
+               .image(DockerImage.fromRegistry("marksailes/al2-graalvm:17-22.2.0"))
 //                .image(DockerImage.fromRegistry("marksailes/arm64-al2-graalvm:17-22.2.0"))
-                .volumes(singletonList(
-                        DockerVolume.builder()
-                                .hostPath(System.getProperty("user.home") + "/.m2/")
-                                .containerPath("/root/.m2/")
-                                .build()
-                ))
-                .user("root")
+                // .volumes(singletonList(
+                //         DockerVolume.builder()
+                //                 .hostPath(System.getProperty("user.home") + "/.m2/")
+                //                 .containerPath("/root/.m2/")
+                //                 .build()
+                // ))
+                // .user("root")
                 .outputType(ARCHIVED)
                 .build();
 

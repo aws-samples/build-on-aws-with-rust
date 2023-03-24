@@ -9,7 +9,7 @@ import software.amazon.awscdk.Environment
 fun main() {
     val app = App()
     val infrastructureStack = InfrastructureStack(
-        app, "ServerlessKotlinDemo", StackProps.builder()
+        app, "kotlin-serverless-demo", StackProps.builder()
             .env(
                 Environment.builder()
                     .account(System.getenv("CDK_DEFAULT_ACCOUNT"))

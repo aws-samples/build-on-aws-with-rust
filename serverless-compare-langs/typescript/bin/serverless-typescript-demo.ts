@@ -6,7 +6,7 @@ import * as cdk from "aws-cdk-lib";
 import { ServerlessTypescriptDemoStack } from '../lib/serverless-typescript-demo-stack';
 
 const app = new cdk.App();
-new ServerlessTypescriptDemoStack(app, 'ServerlessTypescriptDemoStack', {
+new ServerlessTypescriptDemoStack(app, 'typescript-serverless-demo', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
