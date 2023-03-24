@@ -18,6 +18,8 @@ The code within these directories is sourced from AWS repositories via the `sit 
 | `serverless-compare-langs/rust`          | https://github.com/aws-samples/serverless-rust-demo        |
 | `serverless-compare-langs/typescript`    | https://github.com/aws-samples/serverless-typescript-demo  |
 
+The upstream repositories have had slight customizations to enable them to be deployed concurrently.
+
 <!--
 ## Getting started
 
