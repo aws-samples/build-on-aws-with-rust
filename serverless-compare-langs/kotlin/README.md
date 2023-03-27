@@ -36,6 +36,7 @@ gradle shadowJar
 Deploy the demo to your AWS account using [AWS CDK](https://aws.amazon.com/cdk/).
 
 ```bash
+cd infrastructure
 cdk deploy
 ```
 

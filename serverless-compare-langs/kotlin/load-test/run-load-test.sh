@@ -1,4 +1,4 @@
-STACK_NAME=ServerlessKotlinDemo
+STACK_NAME=serverless-kotlin-demo
 
 API_URL=$(aws cloudformation describe-stacks --stack-name $STACK_NAME \
   --query 'Stacks[0].Outputs[?OutputKey==`KotlinApiUrl`].OutputValue' \
