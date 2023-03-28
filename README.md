@@ -1,8 +1,13 @@
 # build-on-aws-with-rust
 
+This repository houses resources that are referenced by the talk
+"Build on AWS with Rust" (BUI06) for the AWS Summit Sydney 2023
+by Tim McNamara ([@timClicks](https://github.com/timClicks)).
 
 ## Directory layout
 
+
+ - `examples`: examples of code that is discussed within the talks slides
  - `serverless-compare-langs`: 5 implementations of an ecommerce application, one per language
 
 
